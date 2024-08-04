@@ -15,28 +15,28 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ENT  |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | TAB  |
+// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  UP | ENT  |
+// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  | LFT | DWN | RGT  |
 //                    | GUI | LWR | SPC |   | SPC | RSE  | ALT |
                         display-name = "Base";
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp TAB
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L      &kp UP   &kp RET
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp LEFT &kp DOWN &kp RIGHT
                   &kp LGUI &mo 1 &kp SPACE   &kp SPACE &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |   '  |
-// | SHFT | BOOT|     |     |     |     |   |     |     |     |     | BOOT|  TAB |
+// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  BT1|  BT2| BT3 | BT4 | BT5 | BKSP |
+// | BTCLR|  6  |  7  |  8  |  9  |  0  |   |     |     |     | BOOT|  ;  |   '  |
+// | SHFT | BOOT|     |     |     |     |   |     |     |     |   . |  /  |  TAB |
 //                    | GUI |     | SPC |   | SPC |     | ALT |
                         display-name = "Lower";
                         bindings = <
-   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &kp SQT
-   &kp LSHFT  &bootloader       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &bootloader &kp TAB
+   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3    &bt BT_SEL 4 &kp BSPC
+   &bt BT_CLR &kp N6       &kp N7       &kp N8       &kp N9       &kp N0         &trans     &trans  &trans   &bootloader  &kp SEMI   &kp SQT
+   &kp LSHFT  &bootloader       &trans       &trans       &trans       &trans         &trans   &trans   &trans   &&kp DOT  &kp FSLH   &kp TAB
                           	        &kp LGUI     &trans       &kp SPACE      &kp SPACE  &trans   &kp RALT
                         >;
                 };
